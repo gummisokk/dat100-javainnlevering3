@@ -30,7 +30,7 @@ public class Tekst extends Innlegg {
 
 	@Override
 	public String toString() {
-		String str = "TEKST";
+		String str = "TEKST\n";
 		str += this.getId() + "\n";
 		str += this.getBruker() + "\n";
 		str += this.getDato() + "\n";

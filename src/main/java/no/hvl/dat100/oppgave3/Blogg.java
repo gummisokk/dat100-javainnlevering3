@@ -30,10 +30,10 @@ public class Blogg {
 	public int finnInnlegg(Innlegg innlegg) {
 		//binærsøk, antar at innleggstabell er sortert etter id, så kan føre til problem TODO
 		int venstre = 0;
-		int høgre = this.nesteledig;
+		int høgre = this.nesteledig-1;
 		while (venstre <= høgre) {
 			int mid = venstre + (høgre - venstre) / 2;
-			if (this.innleggstabell[mid].equals(innlegg))
+			if (this.innleggstabell[mid].erLik(innlegg))
 				return mid;
 			if (this.innleggstabell[mid].getId() < innlegg.getId())
 				venstre = mid + 1;

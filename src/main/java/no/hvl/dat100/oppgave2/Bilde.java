@@ -26,7 +26,7 @@ public class Bilde extends Tekst {
 
 	@Override
 	public String toString() {
-		String str = "BILDE";
+		String str = "BILDE\n";
 		str += this.getId() + "\n";
 		str += this.getBruker() + "\n";
 		str += this.getDato() + "\n";
