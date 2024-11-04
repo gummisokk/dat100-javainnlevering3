@@ -1,7 +1,5 @@
 package no.hvl.dat100.oppgave6;
 
-import no.hvl.dat100.common.TODO;
-import no.hvl.dat100.oppgave1.Innlegg;
 import no.hvl.dat100.oppgave3.Blogg;
 
 public class HtmlBlogg extends Blogg {
@@ -18,7 +16,10 @@ public class HtmlBlogg extends Blogg {
 	
 	@Override
 	public String toString() {
-		throw new UnsupportedOperationException(TODO.method());
-		
+		String HTMLContent = "";
+		for (int i = 0; i < this.getAntall(); i++) {
+			HTMLContent += this.getSamling()[i].toHTML();
+		}
+		return HTMLPREFIX + HTMLContent + HTMLPOSTFIX;
 	}
 }

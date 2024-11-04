@@ -1,6 +1,5 @@
 package no.hvl.dat100.oppgave2;
 
-import no.hvl.dat100.common.TODO;
 import no.hvl.dat100.oppgave1.Innlegg;
 
 public class Tekst extends Innlegg {
@@ -42,8 +41,11 @@ public class Tekst extends Innlegg {
 	// Metoden nedenfor er kun for valgfri oppgave 6
 	@Override
 	public String toHTML() {
-			
-		throw new UnsupportedOperationException(TODO.method());
-				
+		return
+		"		<h2>" + this.getBruker() + 
+		"@" + this.getDato() +
+		" [" + this.getLikes() + "]</h2>\n" +
+		"		<p>" + this.getTekst() + "</p>\n" +
+		"		<hr>\n";
 	}
 }
